@@ -224,16 +224,16 @@ def init_params(H, V, parameter):
         parameter['compColVec'] = dict()
 
         if R == 2:
-            parameter['compColVec'] = np.array([[1, 0, 0], [0, 0.5, 0.5]], dtype=np.float)
+            parameter['compColVec'] = np.array([[1, 0, 0], [0, 0.5, 0.5]], dtype=float)
 
         elif R == 3:
-            parameter['compColVec'] = np.array([[1, 0, 0], [0, 1, 0], [0, 0, 1]], dtype=np.float)
+            parameter['compColVec'] = np.array([[1, 0, 0], [0, 1, 0], [0, 0, 1]], dtype=float)
 
         elif R == 4:
-            parameter['compColVec'] = np.array([[1, 0, 1], [1, 0.5, 0], [0, 1, 0], [0, 0.5, 1]], dtype=np.float)
+            parameter['compColVec'] = np.array([[1, 0, 1], [1, 0.5, 0], [0, 1, 0], [0, 0.5, 1]], dtype=float)
 
         else:
-            parameter['compColVec'] = np.tile(np.array([0.5, 0.5, 0.5]), (R, 1)).astype(np.float)
+            parameter['compColVec'] = np.tile(np.array([0.5, 0.5, 0.5]), (R, 1)).astype(float)
 
     parameter['startSec'] = parameter['deltaT'] if 'startSec' not in parameter else parameter['startSec']
     parameter['endeSec'] = numFrames*parameter['deltaT'] if 'endeSec' not in parameter else parameter['endeSec']
