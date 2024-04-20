@@ -88,7 +88,7 @@ def forwardSTFT(x, parameter=None):
     numFrames = round(numSamples / hopSize)
 
     # initialize with correct size
-    X = np.zeros((np.int(numBins), numFrames), dtype=np.complex64)
+    X = np.zeros((int(numBins), numFrames), dtype=np.complex64)
 
     counter = 0
 
