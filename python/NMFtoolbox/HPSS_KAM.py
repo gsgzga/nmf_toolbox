@@ -90,7 +90,7 @@ def HPSS_KAM_Fitzgerald(X, numIter=1, kernDim=17, useMedian=False, alphaParam=1.
 
     # prepare data for the KAM iterations
     kamX = list()
-    KernOrd = np.ceil(kernDim / 2).astype(np.int)
+    KernOrd = np.ceil(kernDim / 2).astype(int)
 
     # construct median filter kernel
     Kern = np.full((kernDim, kernDim), False, dtype=bool)
