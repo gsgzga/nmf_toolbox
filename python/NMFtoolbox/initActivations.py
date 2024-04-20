@@ -135,7 +135,7 @@ def initActivations(parameter, strategy):
             for k in range(len(uniqueDrums)):
                 currOns = np.nonzero(parameter['drums'] == uniqueDrums[k])[0]
                 currOns = parameter['onsets'][currOns]
-                currOns = np.round(currOns/parameter['deltaT']).astype(np.int)
+                currOns = np.round(currOns/parameter['deltaT']).astype(int)
                 currOns = currOns[currOns >= 0]
                 currOns = currOns[currOns <= parameter['numFrames']]
 
