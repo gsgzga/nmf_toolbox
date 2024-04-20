@@ -104,7 +104,7 @@ def logFreqLogMag(A, deltaF, binsPerOctave=36.0, upperFreq=22050.0, lowerFreq=mi
         logBinAxis = logFreqAxis / deltaF
 
         # compute linear interpolation for the logarithmic mapping
-        floorBinAxis = np.floor(logBinAxis).astype(np.int) - 1
+        floorBinAxis = np.floor(logBinAxis).astype(int) - 1
         ceilBinAxis = floorBinAxis + 1
         fraction = logBinAxis - floorBinAxis - 1
 
